@@ -1,56 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Buy OwO Coins</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
-      background: linear-gradient(to right, #1e1e2f, #2a2a40);
-      color: #fff;
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      color: white;
       padding: 20px;
     }
 
     .container {
       max-width: 800px;
       margin: auto;
-      background: #1a1a2e;
+      background: rgba(0, 0, 0, 0.7);
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     }
 
     h1 {
       text-align: center;
       margin-bottom: 20px;
-      color: #f5a623;
+      color: #ffd369;
     }
 
     .prices {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 15px;
       margin-bottom: 30px;
     }
 
     .price-card {
-      background: #222;
-      border: 2px solid #f5a623;
-      padding: 20px;
-      border-radius: 12px;
+      background: #2d2d3a;
+      border: 1px solid #ffd369;
+      padding: 15px;
+      border-radius: 10px;
       text-align: center;
+      font-weight: bold;
       transition: 0.3s;
     }
 
     .price-card:hover {
-      transform: scale(1.05);
+      background: #39394d;
     }
 
     form {
@@ -67,25 +68,25 @@
     }
 
     input {
-      background: #333;
+      background: #3b3b4f;
       color: #fff;
     }
 
     button {
-      background: #f5a623;
+      background: #ffd369;
       color: #000;
-      cursor: pointer;
       font-weight: bold;
+      cursor: pointer;
     }
 
     .upi-box {
-      background: #292944;
+      background: #2e2e3e;
       padding: 15px;
       text-align: center;
       border-radius: 8px;
       font-size: 18px;
-      margin-bottom: 15px;
-      border: 1px dashed #f5a623;
+      margin-bottom: 20px;
+      border: 1px dashed #ffd369;
     }
 
     .note {
@@ -97,7 +98,8 @@
 
     @media (max-width: 600px) {
       .price-card {
-        padding: 15px;
+        padding: 10px;
+        font-size: 14px;
       }
     }
   </style>
@@ -116,20 +118,22 @@
     </div>
 
     <div class="upi-box">
-      <strong>Payment UPI ID:</strong><br> hakimiwashifali@fam
+      <strong>Payment UPI ID:</strong><br>
+      hakimiwashifali@fam
     </div>
 
     <form action="https://formspree.io/f/xgvyrnnr" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="text" name="discord" placeholder="Discord Username (e.g. OwO#1234)" required>
-      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="email" name="email" placeholder="Your Email" required>
       <input type="text" name="utr" placeholder="Payment UTR ID" required>
-      <input type="text" name="payoutname" placeholder="Payout Name (Your UPI Name)" required>
+      <input type="text" name="payoutname" placeholder="Your UPI Name" required>
       <button type="submit">Submit & Confirm</button>
     </form>
 
     <div class="note">
-      ⚠️ After payment, we will verify your UTR ID. Once verified, OwO coins will be sent to your Discord account.
+      ⚠️ We will verify your UTR ID after payment.<br>
+      If valid, OwO coins will be sent to your Discord account.
     </div>
   </div>
 
